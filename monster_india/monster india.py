@@ -14,16 +14,16 @@ sleep(2)
 driver.find_element_by_xpath("//div[@class='home_ac']").click()
 sleep(1)
 
-driver.find_element_by_xpath("//span[text()='Close']").click()
-sleep(3)
+# driver.find_element_by_xpath("//span[text()='Close']").click()
+# sleep(3)
 
-# driver.find_element_by_xpath("//input[@id='SE_home_autocomplete_location']").send_keys("bangalore")
-# sleep(2)
-#
-# driver.find_element_by_xpath("//span[text()='Bengaluru / Bangalore']").click()
-#
-# driver.find_element_by_xpath("//div[@class='multiselect__select modal-ref-class']").click()
-# driver.find_element_by_xpath("//span[text()='2 Years']").click()
+driver.find_element_by_xpath("//input[@id='SE_home_autocomplete_location']").send_keys("bangalore")
+sleep(2)
+
+driver.find_element_by_xpath("//span[text()='Bengaluru / Bangalore']").click()
+
+driver.find_element_by_xpath("//div[@class='multiselect__select modal-ref-class']").click()
+driver.find_element_by_xpath("//span[text()='2 Years']").click()
 
 
 driver.find_element_by_xpath("//input[@value='Search']").click()
