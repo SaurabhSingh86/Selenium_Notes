@@ -18,7 +18,8 @@ m = driver.find_element_by_css_selector("input[id='gender-male']")
 m.click()
 sleep(2)
 
-first_name = driver.find_element_by_css_selector("input[id='FirstName']")
+# first_name = driver.find_element_by_css_selector("input[id='FirstName']")
+first_name = driver.find_element_by_id("FirstName")
 first_name.send_keys("Steve")
 sleep(2)
 

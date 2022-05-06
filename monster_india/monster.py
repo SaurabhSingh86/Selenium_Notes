@@ -1,0 +1,21 @@
+from time import sleep
+
+from selenium.webdriver import Chrome
+driver = Chrome("./chromedriver.exe")
+driver.get("https://www.monsterindia.com/")
+driver.find_element_by_xpath("//input[@class='input search-bar home_ac']").send_keys("python")
+sleep(2)
+driver.find_element_by_xpath("//div[@class='home_ac']//strong[.='Python']").click()
+sleep(2)
+driver.find_element_by_xpath("//div[@class='col-xl-2 col-lg-3 col-sm-2 col-xxs-12 fl no-padding']/input[@class='btn']").click()
+sleep(2)
+driver.find_element_by_xpath("//input[@placeholder='Location']").send_keys("Bangalore")
+sleep(2)
+driver.find_element_by_xpath("//strong[.='Bangalore']").click()
+sleep(2)
+driver.find_element_by_xpath("//div[@class='multiselect__select modal-ref-class']").click()
+sleep(2)
+driver.find_element_by_xpath("(//span[@class='full modal-ref-class'])[2]").click()
+sleep(2)
+driver.find_element_by_xpath("//input[@value='Search']").click()
+sleep(2)
