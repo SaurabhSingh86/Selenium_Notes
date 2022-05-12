@@ -39,18 +39,23 @@ for book in books:
 
 sleep(2)
 # shopping cart
-# driver.find_element_by_xpath("//span[text()='Shopping cart']").click()
-driver.find_element_by_css_selector("span[class='cart-label']").click()
+driver.find_element_by_xpath("//span[text()='Shopping cart']").click()
+# driver.find_element_by_css_selector("span[class='cart-label']").click()
 sleep(2)
 
-# quantity (all books has 2 no of copies)   ???????????????????????????/ not working
-# for book in books:
-quantity = driver.find_element_by_xpath("//a[text()='Health Book']/../..//input[name='itemquantity2371806']")
-quantity.click()
-
-quantity.clear()
-sleep(1)
-quantity.send_keys('2')
-sleep(2)
+# update the quantity of each itme 2 items each (all books has 2 no of copies)
+for book in books:
+    quantity = driver.find_element_by_xpath(f"//a[text()='{book}']/../..//input[@value='1']")
+    quantity.clear()
+    quantity.send_keys("2")
+    sleep(1)
 
 
+# remove "fiction book" from the shopping cart
+for book in books:
+    if book == 'Fiction':
+        driver.find_element_by_xpath(f"//a[text()='{book}']/../..//input[@type='checkbox']").click()
+        sleep(1)
+
+
+driver.quit()
