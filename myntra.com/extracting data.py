@@ -2,7 +2,8 @@
 from selenium.webdriver import Chrome
 from time import sleep
 
-driver = Chrome("./chromedriver")
+# driver = Chrome("./chromedriver")
+driver = Chrome(r"C:\Users\Saurabh\Desktop\Python+Selenium\selenium_practice\chromedriver.exe")
 
 driver.get("https://www.myntra.com/kids?f=Categories%3ATshirts%3A%3AGender%3Aboys%2Cboys%20girls")
 sleep(5)

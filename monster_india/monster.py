@@ -1,7 +1,8 @@
 from time import sleep
 
 from selenium.webdriver import Chrome
-driver = Chrome("./chromedriver.exe")
+# driver = Chrome("./chromedriver.exe")
+driver = Chrome(r"C:\Users\Saurabh\Desktop\Python+Selenium\selenium_practice\chromedriver.exe")
 driver.get("https://www.monsterindia.com/")
 driver.find_element_by_xpath("//input[@class='input search-bar home_ac']").send_keys("python")
 sleep(2)
