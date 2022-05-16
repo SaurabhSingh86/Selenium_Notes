@@ -4,7 +4,8 @@ from time import sleep
 email_ = "stevejobs12@gmail.com"
 password_ = "Steve123456"
 
-driver = Chrome("./chromedriver")
+# driver = Chrome("./chromedriver")
+driver = Chrome(r"C:\Users\Saurabh\Desktop\Python+Selenium\selenium_practice\chromedriver.exe")
 
 driver.get("http://demowebshop.tricentis.com")
 
