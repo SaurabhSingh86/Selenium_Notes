@@ -12,13 +12,19 @@ sleep(2)
 list_box = driver.find_element_by_id("multiple_cars")
 s = Select(list_box)
 
-s.select_by_visible_text("Jaguar")
-s.select_by_visible_text("Audi")
-s.select_by_visible_text("Volvo")
+# s.select_by_visible_text("Jaguar")
+# s.select_by_visible_text("Audi")
+# s.select_by_visible_text("Volvo")
+sleep(2)
 
 # Returns list of all the options that are currently selected in multi-select listbox
-all_sel_opt = s.all_selected_options
+# all_sel_opt = s.all_selected_options
+# print(all_sel_opt)
+#
+# # print text of each option
+# for item in all_sel_opt:
+#     print(item.text)
 
-# print text of each option
-for item in all_sel_opt:
-    print(item.text)
+s.deselect_all()
+# sleep(2)
+print(s.is_multiple)

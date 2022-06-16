@@ -8,7 +8,11 @@ driver.get("file:///C:/Users/Saurabh/Desktop/Python+Selenium/selenium_practice/S
 driver.maximize_window()
 sleep(2)
 
-list_box = driver.find_element_by_id("standard_cars")
+# condition 1
+# list_box = driver.find_element_by_id("standard_cars")
+
+# condition 2
+list_box = driver.find_element("id", "multiple_cars")
 select = Select(list_box)
 
 all_options = select.options
@@ -17,7 +21,7 @@ for item in all_options:
     print(item.text)
     sleep(1)
 
-
+# in both the conditions the output will be same
 # Select car:
 # Audi
 # BMW

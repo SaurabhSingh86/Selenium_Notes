@@ -2,7 +2,10 @@ from selenium.webdriver import Chrome
 from time import sleep
 from selenium.webdriver.support.select import Select
 
-driver = Chrome("./chromedriver")
+# driver = Chrome("./chromedriver")
+driver = Chrome(r"C:\Users\Saurabh\Desktop\Python+Selenium\selenium_practice\chromedriver.exe")
+
+
 driver.get("file:///C:/Users/Saurabh/Desktop/Python+Selenium/selenium_practice/Selenium/demo.html")
 driver.maximize_window()
 sleep(2)

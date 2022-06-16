@@ -14,7 +14,7 @@ driver.maximize_window()
 driver.implicitly_wait(5)
 
 # upload resume
-driver.find_element("xpath", "//span[text()='Upload Resume']").send_keys("/Users/Saurabh/Desktop/Saurabh_Resume.pdf")
+driver.find_element("xpath", "//span[text()='Upload Resume']").send_keys("C:\Users\Saurabh\Desktop\Saurabh Singh Resume.pdf")
 sleep(2)
 
 # handles = driver.window_handles
