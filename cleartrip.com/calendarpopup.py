@@ -12,6 +12,7 @@ driver.find_element("xpath", "//button[@class='flex flex-middle flex-between t-a
 driver.implicitly_wait(2)
 
 
+
 # Method 1:
 
 month_ = "November 2022"
